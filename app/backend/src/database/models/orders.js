@@ -1,3 +1,8 @@
+const Buyers = require('./buyers');
+const Providers = require('./providers');
+const Users = require('./users');
+const CNPJS = require('./cnpjs');
+
 const Orders = (sequelize, DataTypes) => {
   const Orders = sequelize.define(
     'order',
@@ -29,24 +34,12 @@ const Orders = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         unique: true,
       },
-      emissionDate: {
-        type: DataTypes.STRING,
-      },
-      pdfFile: {
-        type: DataTypes.STRING,
-      },
-      emitedTo: {
-        type: DataTypes.STRING,
-      },
-      nNf: {
-        type: DataTypes.STRING,
-      },
-      CTE: {
-        type: DataTypes.STRING,
-      },
-      value: {
-        type: DataTypes.STRING,
-      },
+      emissionDate: DataTypes.STRING,
+      pdfFile: DataTypes.STRING,
+      emitedTo: DataTypes.STRING,
+      nNf: DataTypes.STRING,
+      CTE: DataTypes.STRING,
+      value: DataTypes.STRING,
       createdAt: {
         type: DataTypes.DATE,
         defaultValue: new Date(),
@@ -109,27 +102,51 @@ const Orders = (sequelize, DataTypes) => {
     }
   );
 
-  // Orders.associate = (models) => {
-  //   Orders.belongsTo(models.provider, {
-  //     foreignKey: 'providerId',
-  //     as: 'provider',
-  //   });
+  Orders.associate = (models) => {
+    Orders.belongsTo(models.provider, {
+      constraint: true,
+      foreignKey: 'providerId',
+    });
 
-  //   Orders.belongsTo(models.buyer, {
-  //     foreignKey: 'buyerId',
-  //     as: 'buyer',
-  //   });
+    Orders.belongsTo(models.buyer, {
+      constraint: true,
+      foreignKey: 'buyerId',
+    });
 
-  //   Orders.belongsTo(models.user, {
-  //     foreignKey: 'userId',
-  //     as: 'user',
-  //   });
+    Orders.belongsTo(models.user, {
+      constraint: true,
+      foreignKey: 'userId',
+    });
 
-  //   Orders.belongsTo(models.cnpj, {
-  //     foreignKey: 'cnpjId',
-  //     as: 'cnpj',
-  //   });
-  // };
+    Orders.belongsTo(models.CNPJ, {
+      constraint: true,
+      foreignKey: 'cnpjId',
+    });
+  };
+
+  Providers.associate = (models) => {
+    Providers.hasMany(models.orders, {
+      foreignKey: 'providerId',
+    });
+  };
+
+  Users.associate = (models) => {
+    Users.hasMany(models.orders, {
+      foreignKey: 'userId',
+    });
+  };
+
+  CNPJS.associate = (models) => {
+    CNPJS.hasMany(models.orders, {
+      foreignKey: 'cnpjId',
+    });
+  };
+
+  Buyers.associate = (models) => {
+    Buyers.hasMany(models.orders, {
+      foreignKey: 'buyerId',
+    });
+  };
 
   return Orders;
 };
