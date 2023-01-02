@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
+import listOfStatus from '../assets/data/listOfStatus';
 import getOrders from '../helpers/getOrders';
-import listOfStatus from '../helpers/listOfStatus';
 import myContext from './myContext';
 
 function MyProvider({ children }) {
