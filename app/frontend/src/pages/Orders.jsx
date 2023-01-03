@@ -3,12 +3,13 @@ import Aside from '../components/Aside';
 import Header from '../components/Header';
 import ReceiptsTable from '../components/ReceiptsTable';
 import Title from '../components/Title';
+import style from '../css/index.module.scss';
 
 const Orders = () => {
   return (
-    <main>
+    <main className={style.main}>
       <Aside />
-      <section>
+      <section className={style.content}>
         <Header />
         <Title />
         <ReceiptsTable />
