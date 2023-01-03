@@ -1,6 +1,7 @@
 version: '3.9'
 services:
   frontend:
+    restart: 'always'
     build: ./app/frontend
     ports:
       - 3000:3000
@@ -14,6 +15,7 @@ services:
       timeout: 10s
       retries: 5
   backend:
+    restart: 'always'
     container_name: app_backend
     build: ./app/backend
     ports:
