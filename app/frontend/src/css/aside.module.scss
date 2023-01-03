@@ -1,0 +1,32 @@
+.aside {
+  padding: 24px;
+  position: relative;
+  width: 286px;
+  &__logo {
+    width: 160px;
+    height: 31px;
+    margin-bottom: 48px;
+  }
+  &__navbar {
+    width: 100%;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    &::before {
+      content: '';
+      position: absolute;
+      height: 64px;
+      width: 4px;
+      border-radius: 4px;
+      background-color: #00ad8c;
+      left: 0;
+    }
+    &_link {
+      text-decoration: none;
+      color: #00ad8c;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 18px;
+    }
+  }
+}
