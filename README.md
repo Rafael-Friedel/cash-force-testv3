@@ -24,3 +24,33 @@ Na sua máquina você deve ter:
 - Acesse o [link da documentação oficial com passos para desinstalar] (https://docs.docker.com/compose/install/#uninstallation) caso necessário.
 
 </details>
+
+## 🚀 Rodando o app local
+
+Para rodar o app local, siga estas etapas:
+
+Linux e macOS:
+
+```
+git clone git@github.com:Rafael-Friedel/cash-force-testv3.git && cd cash-force-testv3
+```
+
+```
+docker compose up --build -d
+```
+
+Isso pode levar alguns minutos..
+
+Basta abrir em seu navegador:
+
+Acesso Front-End
+
+```
+http://localhost:3000/
+```
+
+Acesso Back-End
+
+```
+http://localhost:3001/orders
+```
