@@ -31,24 +31,12 @@ module.exports = {
         type: Sequelize.STRING,
         unique: true,
       },
-      emissionDate: {
-        type: Sequelize.STRING,
-      },
-      pdfFile: {
-        type: Sequelize.STRING,
-      },
-      emitedTo: {
-        type: Sequelize.STRING,
-      },
-      nNf: {
-        type: Sequelize.STRING,
-      },
-      CTE: {
-        type: Sequelize.STRING,
-      },
-      value: {
-        type: Sequelize.STRING,
-      },
+      emissionDate: Sequelize.STRING,
+      pdfFile: Sequelize.STRING,
+      emitedTo: Sequelize.STRING,
+      nNf: Sequelize.STRING,
+      CTE: Sequelize.STRING,
+      value: Sequelize.STRING,
       createdAt: {
         type: Sequelize.DATE,
         defaultValue: new Date(),
@@ -60,28 +48,28 @@ module.exports = {
       cnpjId: {
         type: Sequelize.INTEGER,
         references: {
-          model: 'CNPJS',
+          model: 'cnpjs',
           key: 'id',
         },
       },
       userId: {
         type: Sequelize.INTEGER,
         references: {
-          model: 'Users',
+          model: 'users',
           key: 'id',
         },
       },
       buyerId: {
         type: Sequelize.INTEGER,
         references: {
-          model: 'Buyers',
+          model: 'buyers',
           key: 'id',
         },
       },
       providerId: {
         type: Sequelize.INTEGER,
         references: {
-          model: 'Providers',
+          model: 'providers',
           key: 'id',
         },
       },

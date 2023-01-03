@@ -18,57 +18,23 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      cashforceTax: {
-        type: Sequelize.STRING,
-      },
-      responsibleName: {
-        type: Sequelize.STRING,
-      },
-      responsibleEmail: {
-        type: Sequelize.STRING,
-      },
-      responsiblePosition: {
-        type: Sequelize.STRING,
-      },
-      responsiblePhone: {
-        type: Sequelize.STRING,
-      },
-      responsibleMobile: {
-        type: Sequelize.STRING,
-      },
-      website: {
-        type: Sequelize.STRING,
-      },
-      postalCode: {
-        type: Sequelize.STRING,
-      },
-      address: {
-        type: Sequelize.STRING,
-      },
-      number: {
-        type: Sequelize.STRING,
-      },
-      complement: {
-        type: Sequelize.STRING,
-      },
-      neighborhood: {
-        type: Sequelize.STRING,
-      },
-      city: {
-        type: Sequelize.STRING,
-      },
-      state: {
-        type: Sequelize.STRING,
-      },
-      phoneNumber: {
-        type: Sequelize.STRING,
-      },
-      situation: {
-        type: Sequelize.STRING,
-      },
-      situationDate: {
-        type: Sequelize.STRING,
-      },
+      cashforceTax: Sequelize.STRING,
+      responsibleName: Sequelize.STRING,
+      responsibleEmail: Sequelize.STRING,
+      responsiblePosition: Sequelize.STRING,
+      responsiblePhone: Sequelize.STRING,
+      responsibleMobile: Sequelize.STRING,
+      website: Sequelize.STRING,
+      postalCode: Sequelize.STRING,
+      address: Sequelize.STRING,
+      number: Sequelize.STRING,
+      complement: Sequelize.STRING,
+      neighborhood: Sequelize.STRING,
+      city: Sequelize.STRING,
+      state: Sequelize.STRING,
+      phoneNumber: Sequelize.STRING,
+      situation: Sequelize.STRING,
+      situationDate: Sequelize.STRING,
       createdAt: {
         type: Sequelize.DATE,
         defaultValue: new Date(),
@@ -80,7 +46,7 @@ module.exports = {
       cnpjId: {
         type: Sequelize.INTEGER,
         references: {
-          model: 'CNPJS',
+          model: 'cnpjs',
           key: 'id',
         },
       },
