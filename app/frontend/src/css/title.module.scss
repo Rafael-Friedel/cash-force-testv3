@@ -1,0 +1,19 @@
+.title {
+  margin: 40px 0px 22px 48px;
+  &__heading {
+    color: #021b51;
+    display: flex;
+    gap: 9px;
+    align-items: center;
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+  }
+  &__subtitle {
+    font-weight: 400;
+    color: #727d94;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}

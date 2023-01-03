@@ -1,15 +1,18 @@
 import React from 'react';
 import HandIcon from '../assets/images/HandIcon';
+import style from '../css/title.module.scss';
 
 const Title = () => {
   return (
-    <header>
-      <h1>
+    <div className={style.title}>
+      <h1 className={style.title__heading}>
         <HandIcon fill="#021B51" />
         Notas Fiscais
       </h1>
-      <h4>Visualize as notas fiscais que você tem:</h4>
-    </header>
+      <h4 className={style.title__subtitle}>
+        Visualize as notas fiscais que você tem:
+      </h4>
+    </div>
   );
 };
 
