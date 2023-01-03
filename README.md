@@ -39,6 +39,12 @@ git clone git@github.com:Rafael-Friedel/cash-force-testv3.git && cd cash-force-t
 docker compose up --build -d
 ```
 
+ou
+
+```
+docker-compose up --build -d
+```
+
 Isso pode levar alguns minutos..
 
 Basta abrir em seu navegador:
