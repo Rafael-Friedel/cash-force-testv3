@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import myContext from '../context/myContext';
 import formatDate from '../helpers/formatDate';
+import formatValue from '../helpers/formatValue';
 
 const ReceiptsTable = () => {
   const { orders, listOfStatus } = useContext(myContext);
@@ -24,9 +25,9 @@ const ReceiptsTable = () => {
             <td>{order.buyer.name}</td>
             <td>{order.provider.name}</td>
             <td>{formatDate(order.emissionDate)}</td>
-            <td>{+order.value}</td>
+            <td>{formatValue(+order.value)}</td>
             <td>{listOfStatus[+order.orderStatusBuyer]}</td>
-            <button>Dados do cedente</button>
+            <button type="button">Dados do cedente</button>
           </tr>
         ))}
       </tbody>
