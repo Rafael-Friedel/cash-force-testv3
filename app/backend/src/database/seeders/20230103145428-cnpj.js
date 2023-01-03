@@ -14,7 +14,7 @@ module.exports = {
           updatedAt: '2020-10-29 21:20:33',
         },
         {
-          id: 1,
+          id: 2,
           cnpj: '00000000000002',
           companyType: '1',
           createdAt: '2020-10-29 21:20:33',
