@@ -7,7 +7,7 @@ Na sua máquina você deve ter:
 
 - [Node v18.12.1](https://nodejs.org/en/)
 - [Docker version 20.10.20](https://www.docker.com/products/docker-desktop/)
-- [Caso queira desinstalar Docker](https://docs.docker.com/compose/install/#uninstallation)
+- [Caso queira desinstalar o Docker após rodar o projeto](https://docs.docker.com/compose/install/#uninstallation)
 
 </details>
 
