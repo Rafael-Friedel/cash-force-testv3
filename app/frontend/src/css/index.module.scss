@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'DM Sams', sans-serif;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fbfdfe;
+  height: 100vh;
+}
+
+.content {
+  flex-grow: 1;
+  background-color: #fff;
+  box-shadow: 0 10px 30px rgba(225, 229, 236, 0.5);
+  border-radius: 15px 0 0 15px;
+  height: 100%;
+}
