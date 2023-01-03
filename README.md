@@ -6,7 +6,7 @@
 Na sua máquina você deve ter:
 
 - [Node v18.12.1](https://nodejs.org/en/)
-- [Docker version 20.10.20](https://www.docker.com/products/docker-desktop/)
+- [Docker version 20.10.20](https://docs.docker.com/engine/install/ubuntu/)
 - [Caso queira desinstalar o Docker após rodar o projeto](https://docs.docker.com/compose/install/#uninstallation)
 
 </details>
